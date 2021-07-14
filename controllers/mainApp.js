@@ -42,6 +42,8 @@ function fetchCall() {
     Estamos recuperando un archivo JSON a través de red e imprimiendo en la consola. El uso de fetch() más simple toma un argumento (la ruta del recurso que quieres obtener) y devuelve un objeto Promise conteniendo la respuesta, un objeto Response.
 
     Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método json()
+
+    Fetch coge la url y devuelve una Promise. Si tiene éxito, entonces (.then) lo convertirá a .json, y entonces (segundo .then) cogerá este .json y lo mostrará en nuestro html. Si la consulta no tuviera éxito, podríamos definir también alguna acción mediante .catch en vez de .then.
     */
 
 
