@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* Imports */
+/* Color rojo para animación neón */
+/* Color azul verdoso para animación neón */
+/* Mixin para elementos con d-flex y justify content center */
+* {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif; }
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: url("https://cdn.pixabay.com/photo/2016/03/23/17/33/curtain-1275200_1280.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #7e0303; }
+
+.header {
+  filter: brightness(200%); }
+  .header #headerTitle {
+    color: #fce147;
+    font-family: "Zen Tokyo Zoo", cursive;
+    font-size: 50px;
+    font-weight: bold;
+    animation: flicker 1.5s infinite alternate;
+    letter-spacing: 1.5px; }
+
+.jokeSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .jokeSection .jokeContainer {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(236, 208, 208, 0.356); }
+    .jokeSection .jokeContainer #joke {
+      letter-spacing: 2px;
+      text-shadow: 0 0 4px #faee44;
+      font-weight: bold;
+      font-size: 19px;
+      text-align: center; }
+  .jokeSection .ajaxBtnContainer {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center; }
+    .jokeSection .ajaxBtnContainer #ajaxBtn {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #fae881;
+      border: none;
+      border-radius: 4px;
+      transition-duration: 0.4s;
+      cursor: pointer; }
+      .jokeSection .ajaxBtnContainer #ajaxBtn .ajaxBtnIcon {
+        margin: 0px; }
+      .jokeSection .ajaxBtnContainer #ajaxBtn .ajaxBtnText {
+        margin: 0px;
+        letter-spacing: 1px; }
+    .jokeSection .ajaxBtnContainer #ajaxBtn:hover {
+      background-color: #ffd900;
+      box-shadow: 5px 12px 16px 0 rgba(102, 91, 8, 0.185), 0 17px 50px 0 rgba(102, 91, 8, 0.185); }
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  margin: 0px; }
+
+#microImg {
+  position: relative;
+  display: none; }
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fa4444, 0 0 11px #fa4444, 0 0 19px #fa4444, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa; }
+  20%,
+  24%,
+  55% {
+    text-shadow: none; } }
+
+/*# sourceMappingURL=styles.css.map */

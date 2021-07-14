@@ -1,0 +1,5 @@
+/* Mixin para elementos con d-flex y justify content center */
+@mixin flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}

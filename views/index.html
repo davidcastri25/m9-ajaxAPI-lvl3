@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hoja de estilos CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+
+    <title>JQuery + AJAX - lvl3</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Encabezado de la página -->
+        <header class="header">
+            <h1 id="headerTitle">The Comedy Club: Chuck Norris Edition</h1>
+            <audio id="applause" src="./sounds/Applause Sound Effect.mp3"></audio>
+        </header>
+
+        <!-- Sección de chistes y botón-->
+        <section class="jokeSection">
+            <!-- Contenedor donde se mostrará el chiste -->
+            <div class="jokeContainer">
+                <p id="joke">
+
+                </p>
+            </div>
+
+            <!-- Botón que hará la llamada AJAX -->
+            <div class="ajaxBtnContainer">
+                <button type="button" id="ajaxBtn">
+                    <i class="fas fa-theater-masks fa-lg ajaxBtnIcon"></i>
+                    <span class="ajaxBtnText">
+                        Request another joke!
+                    </span>
+
+                </button>
+                <!-- Audio a reproducir cuando se apreta el botón -->
+                <audio id="drums" src="./sounds/Joke Sound Effect (Ba dum tss!).mp3"></audio>
+            </div>
+        </section>
+
+        <!-- Sección imágenes (si el chiste tuviera audio asociado, podría ser el elemento que lanzase el evento de reproducción) -->
+        <section class="imageSection">
+            <img src="./images/microphone.png" alt="Imagen micrófono" id="microImg">
+        </section>
+    </div>
+
+
+
+
+
+
+    <!-- Jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Links de nuestro código JS -->
+    <script src="../controllers/mainApp.js"></script>
+</body>
+
+</html>

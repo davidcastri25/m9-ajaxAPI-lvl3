@@ -1,0 +1,122 @@
+/* Imports */
+@import "./components/colors"; //Variables de color
+@import "./components/mixins"; //Mixins
+
+* {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: url("https://cdn.pixabay.com/photo/2016/03/23/17/33/curtain-1275200_1280.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(126, 3, 3);
+}
+
+.header {
+  filter: brightness(200%);
+
+  #headerTitle {
+    color: rgb(252, 225, 71);
+    font-family: "Zen Tokyo Zoo", cursive;
+    font-size: 50px;
+    font-weight: bold;
+    animation: flicker 1.5s infinite alternate;
+    letter-spacing: 1.5px;
+  }
+}
+
+.jokeSection {
+  @include flexJustifyCenter;
+  flex-wrap: wrap;
+
+  .jokeContainer {
+    flex-basis: 100%;
+    @include flexJustifyCenter;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(236, 208, 208, 0.356);
+
+    #joke {
+      letter-spacing: 2px;
+      text-shadow: 0 0 4px rgb(250, 238, 68);
+      font-weight: bold;
+      font-size: 19px;
+      text-align: center;
+    }
+  }
+
+  .ajaxBtnContainer {
+    flex-basis: 100%;
+    @include flexJustifyCenter;
+
+    #ajaxBtn {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: rgb(250, 232, 129);
+      border: none;
+      border-radius: 4px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+
+      .ajaxBtnIcon {
+        margin: 0px;
+      }
+
+      .ajaxBtnText {
+        margin: 0px;
+        letter-spacing: 1px;
+      }
+    }
+
+    #ajaxBtn:hover {
+      background-color: rgb(255, 217, 0);
+      box-shadow: 5px 12px 16px 0 rgba(102, 91, 8, 0.185),
+        0 17px 50px 0 rgba(102, 91, 8, 0.185);
+    }
+  }
+}
+
+.imageSection {
+  @include flexJustifyCenter;
+  margin: 0px;
+}
+
+#microImg {
+  position: relative;
+  display: none;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px $redNeon, 0 0 11px $redNeon, 0 0 19px $redNeon,
+      0 0 40px $blueNeon, 0 0 80px $blueNeon, 0 0 90px $blueNeon,
+      0 0 100px $blueNeon, 0 0 150px $blueNeon;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
